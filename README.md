@@ -1,7 +1,7 @@
 Olivier Dufort
 Félix Méplon
 
-Youtube short link: [...coming soon](https://www.youtube.com/shorts/imqMNovfpAw)
+Youtube short link: https://www.youtube.com/shorts/imqMNovfpAw
 
 Adafruit feeds link: https://io.adafruit.com/Olivieri/feeds
 
