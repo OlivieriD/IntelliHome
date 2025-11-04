@@ -7,6 +7,14 @@ Adafruit feeds link: https://io.adafruit.com/Olivieri/feeds
 
 Adafruit dashboard link: https://io.adafruit.com/Olivieri/dashboards/intellihome
 
+Project Reflexion:
+
+The primary element that worked well was the MQTT Adafruit connection, which allowed for remote control and easy dashboard configuration. By separating the real-time communication handled with MQTT_communicator from the main application logic, the system has great responsiveness and does not overwhelm with data. This allowed for simultaneous sensor monitoring, data logging, and immediate processing of remote commands without the main loop freezing. The decision to manage logging locally before a daily upload also ensured data integrity in case of an internet outage, a crucial reliability feature.
+
+The hardest challenge was undoubtedly managing the complexities of a overloading the system in Python, particularly around sensor cooldown and camera integration. Specifically, ensuring the camera only captured an image once per intrusion event, and not repeatedly due to cooldown issues, which required careful design within the security_module.py logic and had to be modified plenty of time.
+
+If I could improve one thing, it would be the implementation of the daily cloud upload for the log files. Currently, the system logs data locally to the logs folder, but it lacks an automated script to push these files to long-term external cloud storage such as GoogleDrive. This would make the system more practical and life-like.
+
 Main Adafruit pictures:
 
 <img width="1457" height="685" alt="feeds" src="https://github.com/user-attachments/assets/f15852f3-0e63-4717-9907-c740f35dea16" />
